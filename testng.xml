@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GYPL_BanckP4" parallel="tests" thread-count="1" preserve-order="true">
+    <parameter name="browserName" value=""/>
+    <suite-files>
+        <suite-file path="Newcustomeraccount.xml"/>
+        <suite-file path="editecustomer.xml"/>
+        <suite-file path="deletecustomer.xml"/>
+        <suite-file path="creatNewaccount.xml"/>
+        <suite-file path="editeAccount.xml"/>
+        <suite-file path="deleteAccount.xml"/>
+        <suite-file path="miniStatement.xml"/>
+        <suite-file path="customised_Statement.xml"/>
+        <suite-file path="logout.xml"/>
+
+
+
+    </suite-files>
+</suite>

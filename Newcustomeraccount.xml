@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Craete New Customer Account">
+    <!-- Parameter for browser -->
+    <parameter name="browserName" value="" />
+    <!-- Test case for Login -->
+    <test name="Craete New Customer Account ">
+        <classes>
+            <class name="testcases.TC01_Login">
+                <methods>
+                    <include name="login_to_my_account_With_Valid_data_P" />
+                </methods>
+            </class>
+            <class name="testcases.TC02_CreateNewCustomer">
+                <methods>
+                    <include name="createNewCustomerAccount_P" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
