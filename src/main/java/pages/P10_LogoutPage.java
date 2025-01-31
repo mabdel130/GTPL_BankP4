@@ -22,7 +22,6 @@ public class P10_LogoutPage extends  BasePage {
         // shortWait(driver).until(ExpectedConditions.visibilityOfElementLocated(( logOut_Button))).click();
         return new P10_LogoutPage(driver);
     }
-
     public P10_LogoutPage getsuccessmsg() {
         shortWait(driver).until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();

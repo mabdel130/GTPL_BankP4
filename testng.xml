@@ -3,6 +3,7 @@
 <suite name="GYPL_BanckP4" parallel="tests" thread-count="1" preserve-order="true">
     <parameter name="browserName" value=""/>
     <suite-files>
+        <suite-file path="login.xml"/>
         <suite-file path="Newcustomeraccount.xml"/>
         <suite-file path="editecustomer.xml"/>
         <suite-file path="deletecustomer.xml"/>

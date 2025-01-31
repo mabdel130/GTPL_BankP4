@@ -3,6 +3,7 @@ import common.MyScreenRecorder;
 import drivers.DriverFactory;
 import org.testng.annotations.*;
 
+import javax.print.attribute.standard.MediaSize;
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
@@ -10,11 +11,7 @@ import static drivers.DriverHolder.getDriver;
 import static drivers.DriverHolder.setDriver;
 import static pages.BasePage.quitBrowser;
 import static util.Utlity.openBrowserNetworkTab;
-
 public class BaseTest {
-    String usernamelogin = "mngr608631";
-    String passwordlogin = "zYjyqej";
-
     @BeforeSuite
     public void bruteforce() throws Exception {
         MyScreenRecorder.startRecording("LOGIN.TEST");

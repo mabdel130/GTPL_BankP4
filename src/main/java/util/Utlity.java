@@ -1,8 +1,16 @@
 package util;
 
 
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.json.JSONObject;
+import org.monte.media.ParseException;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -58,7 +66,23 @@ public class Utlity {
         // Combine them into a full name
         return firstName+lastName;
     }
+    public static String getExcelData(int RowNum, int ColNum, String SheetName) {
+        XSSFWorkbook workBook;
+        XSSFSheet sheet;
+        String projectPath = System.getProperty("user.dir");
+        String cellData = null;
+        try {
+            workBook = new XSSFWorkbook(projectPath + "/src/test/resources/data_driven/data.xlsx");
+            sheet = workBook.getSheet(SheetName);
+            cellData = sheet.getRow(RowNum).getCell(ColNum).getStringCellValue();
 
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+            System.out.println(e.getCause());
+            e.printStackTrace();
+        }
+        return cellData;
+    }
 
     public static String generateRandomDate(int startYear, int endYear) {
         // Define the start and end dates
@@ -313,6 +337,7 @@ public class Utlity {
 
         return pin.toString();  // Return the generated PIN as a string
     }
+
     public static void openBrowserNetworkTab() throws AWTException {
         // Create Robot instance
         Robot robot = new Robot();
@@ -349,6 +374,7 @@ public class Utlity {
             // Add a small delay between presses
             robot.delay(200);
         }
+
     }
 
 }
