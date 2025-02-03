@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.P01_LoginPage;
+import retrytest.myRetry;
 
 
 import static drivers.DriverHolder.getDriver;
@@ -16,7 +17,7 @@ import static util.Utlity.getExcelData;
 
 public class TC01_Login extends BaseTest {
 
-    @Test(priority = 1, description = "Login to GTPL With Valid Data")
+    @Test(priority = 1, description = "Login to GTPL With Valid Data",retryAnalyzer = myRetry.class)
     public void login_to_my_account_With_Valid_data_P(){
          String usernamelogin= getExcelData(0,0,"login");
          String   passwordlogin=getExcelData(1,0,"login");
